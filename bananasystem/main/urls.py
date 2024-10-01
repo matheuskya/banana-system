@@ -29,3 +29,9 @@ urlpatterns += [
     path("password_change/", auth_views.PasswordChangeView.as_view(), name='password_change'),
     path("password_change/done/", auth_views.PasswordChangeDoneView.as_view(), name='password_change_done'),
 ]
+
+#profile
+urlpatterns += [
+    path("profile/", views.view_profile, name="view_profile"),
+    path("profile/update/", views.edit_profile, name="profile_update"),
+]
