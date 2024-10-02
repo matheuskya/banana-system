@@ -52,3 +52,9 @@ def edit_profile(request):
         'profile_form' : profile_form
     }
     return render(request, 'main/edit_profile.html', context)
+
+def chat_view(request):
+    if not request.user.is_authenticated:
+        return redirect('login')
+    context = {}
+    return render(request, 'main/chat.html', context)

@@ -8,6 +8,7 @@ from django.conf.urls.static import static
 #main views
 urlpatterns = [
     path("index/", views.index, name="index"),
+    path("chat/", views.chat_view, name='chat_view'),
 ]
 
 #auth
