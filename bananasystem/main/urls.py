@@ -1,7 +1,9 @@
 from django.urls import path
 from main import views
 from django.contrib.auth import views as auth_views
-from bananasystem import settings
+# from bananasystem import settings
+from django.conf import settings
+from django.conf.urls.static import static
 
 #main views
 urlpatterns = [
@@ -33,5 +35,5 @@ urlpatterns += [
 #profile
 urlpatterns += [
     path("profile/", views.view_profile, name="view_profile"),
-    path("profile/update/", views.edit_profile, name="profile_update"),
+    path("profile/update/", views.edit_profile, name="edit_profile"),
 ]

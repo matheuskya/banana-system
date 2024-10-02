@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from main.forms import RegisterForm, UserUpdateform, ProfileUpdateForm
+from main.forms import RegisterForm, UserUpdateForm, ProfileUpdateForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from main.models import Profile
@@ -28,9 +28,12 @@ def logout(request):
 
 def view_profile(request):
     profile = Profile.objects.get(user=request.user)
+    image_url = profile.profile_picture.url
     context = {
-        'profile' : profile
+        'profile' : profile,
+        'profile_picture' : image_url
     }
+    print(image_url)
     return render(request, "main/profile.html", context)
 
 def edit_profile(request):
@@ -48,4 +51,4 @@ def edit_profile(request):
         'user_form' : user_form,
         'profile_form' : profile_form
     }
-    return render(request, 'edit_profile.html', context)
+    return render(request, 'main/edit_profile.html', context)
