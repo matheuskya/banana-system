@@ -28,12 +28,18 @@ def logout(request):
 
 def view_profile(request):
     profile = Profile.objects.get(user=request.user)
-    image_url = profile.profile_picture.url
-    context = {
-        'profile' : profile,
-        'profile_picture' : image_url
-    }
-    print(image_url)
+
+    if profile.profile_picture:
+        image_url = profile.profile_picture.url
+        context = {
+            'profile' : profile,
+            'profile_picture' : image_url
+        }
+    else:
+        context = {
+            'profile' : profile,
+
+        }
     return render(request, "main/profile.html", context)
 
 def edit_profile(request):
