@@ -53,7 +53,7 @@ def edit_profile(request):
     }
     return render(request, 'main/edit_profile.html', context)
 
-def chat_view(request):
+def chat_view(request, *args, **kwargs):
     if not request.user.is_authenticated:
         return redirect('login')
     context = {}
