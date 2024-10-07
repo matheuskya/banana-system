@@ -3,3 +3,5 @@ Pillow
 channels
 daphne
 django-bootstrap-v5
+python-dotenv
+gunicorn
