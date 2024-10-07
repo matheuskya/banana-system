@@ -7,6 +7,7 @@ from django.conf.urls.static import static
 
 #main views
 urlpatterns = [
+    path('about/', views.about, name='about'),
     path("index/", views.index, name="index"),
     path("chat/", views.chat_view, name='chat_view'),
 ]

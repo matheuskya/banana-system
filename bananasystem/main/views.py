@@ -7,6 +7,10 @@ from main.models import Profile
 
 
 # Create your views here.
+
+def red_index(request):
+    return redirect('index')
+
 @login_required()
 def index(request):
     context = {}
@@ -64,3 +68,7 @@ def chat_view(request, *args, **kwargs):
         return redirect('login')
     context = {}
     return render(request, 'main/chat.html', context)
+
+def about(request):
+    context = {}
+    return render(request, 'main/about.html', context)

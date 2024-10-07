@@ -1,3 +1,6 @@
+{% extends 'base.html' %}
+
+    {% block content %}
 <h1>Bananachat &#9997;</h1>
 
 <form action="{%url 'logout'%}" method="POST">
@@ -8,3 +11,6 @@
 <p><a href='{%url "chat_view"%}'>Chat!</a></p>
 <p><a href='{%url "password_change"%}'>Change Password</a></p>
 <p><a href="{% url 'view_profile'%}">My Profile</a></p>
+<p><a href="{% url 'about'%}">About this project!</a></p>
+
+    {%endblock content%}

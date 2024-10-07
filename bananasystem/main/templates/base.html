@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{% block title %}bananachat &#9997;{% endblock %}</title>
+        {% load bootstrap5 %}
+        {% bootstrap_css %}
+        {% bootstrap_javascript %}
+        {% block extra_head %}{% endblock %}
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&display=swap" rel="stylesheet">
+
+            <!-- Custom CSS -->
+            <style>
+                body {
+                    font-family: 'JetBrains Mono', monospace;
+                }
+                /* Add any other custom styles here */
+
+            </style>
+    </head>
+    <body>
+        <header>{% block header %}{% endblock %}</header>
+
+        <main class="container d-flex align-items-center justify-content-center" style="min-height: calc(100vh - 60px);">
+            <div class="row">
+                <div class="col-12 text-center">
+                    {% block content %}{% endblock %}
+                </div>
+            </div>
+        </main>
+
+        <footer
+            style="
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                text-align: center;
+            "
+        >
+            <p>
+                Made with 💜 by
+                <a href="https://matheuskya.github.io/">matheuskya</a>
+            </p>
+        </footer>
+
+        {% block extra_body %}{% endblock %}
+    </body>
+</html>
