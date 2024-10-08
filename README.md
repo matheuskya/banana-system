@@ -6,6 +6,33 @@ This is a project inspired by <a href="https://www.youtube.com/watch?v=RELWFGJnK
 Since I had never built something like this before, I decided to give it a try, and it turned out great!
 Through this project, I practiced key skills such as Django, profile management, chatting, and authentication. I hope you enjoy it!
 
+### Cloning the Project
+
+To get a local copy of this project up and running, follow these simple steps:
+
+1. Install Git:
+   If you don't have Git installed on your computer, download and install it from [git-scm.com](https://git-scm.com/).
+
+2. Open a terminal (Command Prompt or PowerShell on Windows, Terminal on macOS and Linux).
+
+3. Navigate to the directory where you want to clone the project:
+   ```
+   cd path/to/your/desired/directory
+   ```
+
+4. Clone the repository:
+   ```
+   git clone https://github.com/matheuskya/banana-system.git
+   ```
+
+
+5. Navigate into the project directory:
+   ```
+   cd banana-system
+   ```
+
+
+
 ## Setup for Linux Users
 
 ### Creating and Activating a Virtual Environment
@@ -80,6 +107,7 @@ To set up the project on Windows, follow these steps to create and activate a vi
 
 Remember to activate the virtual environment every time you work on the project.
 
+
 ### Installing Dependencies
 
 After activating your virtual environment, you need to install the project dependencies. These are listed in the `requirements.txt` file.
@@ -138,5 +166,3 @@ After setting up your virtual environment and installing dependencies, you can s
 5. Open your web browser and go to `http://127.0.0.1:8000/` to view the application.
 
 6. To stop the server, press CTRL+C in the terminal where the server is running.
-
-Note: This server is for development purposes only. For production deployment, please refer to Django's deployment documentation.
