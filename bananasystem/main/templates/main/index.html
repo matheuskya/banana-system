@@ -1,7 +1,14 @@
-{% extends 'base.html' %}
-
-    {% block content %}
+{% extends 'base.html' %} {% block content %}
 <h1>Bananachat &#9997;</h1>
+
+<p style="color: red">
+    Unfortunately, the live chat functionality doesn't work, since the app is
+    hosted on pythonanywhere.com, and pythonanywhere doesn't support websockets
+    therefore doesn't support channels, daphne and the live chat functionality.
+    <br />
+    You can still try to run the app locally, just follow the
+    <a href="https://github.com/matheuskya/banana-system"> documentation </a>
+</p>
 
 <form action="{%url 'logout'%}" method="POST">
     {% csrf_token %}
@@ -13,4 +20,4 @@
 <p><a href="{% url 'view_profile'%}">My Profile</a></p>
 <p><a href="{% url 'about'%}">About this project!</a></p>
 
-    {%endblock content%}
+{%endblock content%}
