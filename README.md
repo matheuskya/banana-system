@@ -79,3 +79,30 @@ To set up the project on Windows, follow these steps to create and activate a vi
    ```
 
 Remember to activate the virtual environment every time you work on the project.
+
+### Installing Dependencies
+
+After activating your virtual environment, you need to install the project dependencies. These are listed in the `requirements.txt` file.
+
+1. Ensure you're in your project directory and your virtual environment is activated.
+
+2. Install the dependencies using pip:
+   ```
+   pip install -r requirements.txt
+   ```
+
+3. Wait for the installation to complete. Pip will download and install all the packages listed in the requirements.txt file.
+
+4. Once the installation is complete, you can verify the installed packages by running:
+   ```
+   pip list
+   ```
+
+   This will show all packages installed in your virtual environment.
+
+Note: If you encounter any issues during installation, ensure that your pip is up to date:
+```
+pip install --upgrade pip
+```
+
+Then try the installation command again.
