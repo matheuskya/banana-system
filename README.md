@@ -106,3 +106,37 @@ pip install --upgrade pip
 ```
 
 Then try the installation command again.
+
+## Running the Django Development Server
+
+After setting up your virtual environment and installing dependencies, you can start the Django development server:
+
+1. Ensure your virtual environment is activated.
+
+2. Navigate to the project directory:
+   ```
+   cd banana-system/bananasystem
+   ```
+
+3. Start the Django development server:
+   ```
+   python manage.py runserver
+   ```
+
+4. You should see output similar to this:
+   ```
+   Watching for file changes with StatReloader
+   Performing system checks...
+
+   System check identified no issues (0 silenced).
+   Month Day, Year - HH:MM:SS
+   Django version X.X.X, using settings 'bananasystem.settings'
+   Starting development server at http://127.0.0.1:8000/
+   Quit the server with CONTROL-C.
+   ```
+
+5. Open your web browser and go to `http://127.0.0.1:8000/` to view the application.
+
+6. To stop the server, press CTRL+C in the terminal where the server is running.
+
+Note: This server is for development purposes only. For production deployment, please refer to Django's deployment documentation.
